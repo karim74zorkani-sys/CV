@@ -1,200 +1,312 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karim Zorkani — RSSI & Expert Cybersécurité</title>
 
-<title>Karim Zorkani — RSSI & Expert Cybersécurité</title>
+  <meta name="description" content="RSSI & Expert Cybersécurité CISSP basé entre Lille et Rabat. ISO 27001, ISO 27005, NIS2. Consultant freelance.">
+  <meta name="keywords" content="RSSI, cybersécurité, ISO 27001, NIS2, consultant sécurité, CISSP, SOC SIEM">
+  <meta name="author" content="Karim Zorkani">
 
-<meta name="description" content="RSSI & Expert Cybersécurité CISSP basé entre Lille et Rabat. ISO 27001, ISO 27005, NIS2. Consultant freelance.">
-<meta name="keywords" content="RSSI, cybersécurité, ISO 27001, NIS2, consultant sécurité, CISSP, SOC SIEM">
-<meta name="author" content="Karim Zorkani">
+  <meta property="og:title" content="Karim Zorkani — RSSI & Expert Cybersécurité">
+  <meta property="og:description" content="Consultant cybersécurité CISSP | ISO 27001 | NIS2">
+  <meta property="og:image" content="profile.jpg">
+  <meta property="og:url" content="https://karim74zorkani-sys.github.io/CV/">
+  <meta name="twitter:card" content="summary_large_image">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Karim Zorkani — RSSI & Expert Cybersécurité">
-<meta property="og:description" content="Consultant cybersécurité CISSP | ISO 27001 | NIS2">
-<meta property="og:image" content="profile.jpg">
-<meta property="og:url" content="https://karim74zorkani-sys.github.io/CV/">
-<meta name="twitter:card" content="summary_large_image">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-<style>
-body {
-  margin:0;
-  font-family: Arial, sans-serif;
-  background:#f3f2ef;
-}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f2ef;
+      color: #1d2226;
+      line-height: 1.6;
+    }
 
-.container {
-  max-width:900px;
-  margin:auto;
-  padding:0 15px;
-}
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 16px 32px;
+    }
 
-.banner {
-  height:140px;
-  background:linear-gradient(90deg,#0a66c2,#004182);
-}
+    .banner {
+      height: 180px;
+      background: linear-gradient(135deg, #0a66c2, #004182);
+    }
 
-.profile {
-  background:white;
-  padding:25px;
-  border-radius:10px;
-  margin-top:-80px;
-  border:1px solid #ddd;
-  position:relative;
-}
+    .profile {
+      background: #fff;
+      padding: 24px;
+      border-radius: 12px;
+      margin-top: -70px;
+      border: 1px solid #d9d9d9;
+      position: relative;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
 
-.profile img {
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  border:4px solid white;
-  position:absolute;
-  top:-60px;
-}
+    .photo-wrap {
+      width: 132px;
+      height: 132px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid #fff;
+      background: #eaeaea;
+      margin-top: -86px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
 
-h1 {
-  margin-top:70px;
-  margin-bottom:5px;
-}
+    .photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
-.subtitle {
-  color:#555;
-  margin-bottom:10px;
-}
+    h1 {
+      margin: 0 0 6px;
+      font-size: 32px;
+      line-height: 1.2;
+    }
 
-.contact a {
-  color:#0a66c2;
-  text-decoration:none;
-  font-size:14px;
-}
+    h2 {
+      margin: 0 0 14px;
+      font-size: 22px;
+      color: #0a66c2;
+    }
 
-.card {
-  background:white;
-  padding:20px;
-  margin-top:15px;
-  border-radius:10px;
-  border:1px solid #ddd;
-}
+    .subtitle {
+      color: #5e5e5e;
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
 
-.badge {
-  display:inline-block;
-  background:#e7f3ff;
-  color:#0a66c2;
-  padding:6px 12px;
-  margin:4px;
-  border-radius:20px;
-  font-size:12px;
-}
+    .contact {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 14px;
+    }
 
-.job {
-  margin-bottom:20px;
-}
+    .contact a {
+      color: #0a66c2;
+      text-decoration: none;
+    }
 
-.title { font-weight:bold; }
-.date { font-size:13px; color:#777; }
+    .contact a:hover {
+      text-decoration: underline;
+    }
 
-ul { padding-left:18px; }
+    .summary {
+      margin: 0;
+      color: #333;
+    }
 
-.btn {
-  display:inline-block;
-  margin-top:10px;
-  background:#0a66c2;
-  color:white;
-  padding:8px 15px;
-  border-radius:6px;
-  text-decoration:none;
-}
+    .card {
+      background: #fff;
+      padding: 22px;
+      margin-top: 16px;
+      border-radius: 12px;
+      border: 1px solid #d9d9d9;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
 
-.btn:hover {
-  background:#004182;
-}
-</style>
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #e7f3ff;
+      color: #0a66c2;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .job {
+      margin-bottom: 22px;
+    }
+
+    .job:last-child {
+      margin-bottom: 0;
+    }
+
+    .title {
+      font-weight: 700;
+      font-size: 17px;
+      margin-bottom: 4px;
+    }
+
+    .date {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 8px;
+    }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 16px;
+      background: #0a66c2;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      background: #004182;
+    }
+
+    @media (max-width: 600px) {
+      .banner {
+        height: 140px;
+      }
+
+      .profile {
+        margin-top: -50px;
+        padding: 18px;
+      }
+
+      .photo-wrap {
+        width: 110px;
+        height: 110px;
+        margin-top: -70px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+      }
+
+      .contact {
+        font-size: 13px;
+      }
+
+      .contact span {
+        display: block;
+        margin-bottom: 4px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="banner"></div>
+  <div class="banner"></div>
 
-<div class="container">
+  <div class="container">
+    <section class="profile">
+      <div class="photo-wrap">
+        <img src="profile.jpg" alt="Karim Zorkani">
+      </div>
 
-<div class="profile">
+      <h1>Karim Zorkani</h1>
+      <div class="subtitle">RSSI · Expert Cybersécurité · CISSP</div>
 
-<img src="profile.jpg" alt="Karim Zorkani">
+      <div class="contact">
+        <span>📧 <a href="mailto:karim74zorkani@gmail.com">karim74zorkani@gmail.com</a></span> |
+        <span>📞 <a href="tel:+212661241301">+212 661 24 13 01</a></span> |
+        <span>🔗 <a href="https://www.linkedin.com/in/karim-zorkani-05b2ba1/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+      </div>
 
-<h1>Karim Zorkani</h1>
-<div class="subtitle">RSSI · Expert Cybersécurité · CISSP</div>
+      <p class="summary">
+        RSSI freelance cybersécurité en France et au Maroc, spécialisé en ISO 27001, ISO 27005 et NIS2.
+        30 ans d’expérience IT dont 5 ans en cybersécurité, avec une expertise en gouvernance, gestion des risques,
+        conformité et résilience opérationnelle.
+      </p>
+    </section>
 
-<div class="contact">
-📧 <a href="mailto:karim74zorkani@gmail.com">karim74zorkani@gmail.com</a> |
-📞 <a href="tel:+212661241301">+212 661 24 13 01</a> |
-🔗 <a href="https://www.linkedin.com/in/karim-zorkani-05b2ba1/" target="_blank">LinkedIn</a>
-</div>
+    <section class="card">
+      <h2>Disponibilité</h2>
+      <p>Disponible immédiatement pour des missions RSSI, audits ISO 27001, conformité NIS2, gestion des risques et gouvernance cybersécurité.</p>
+    </section>
 
-<p style="margin-top:10px;color:#444;">
-RSSI freelance cybersécurité en France et Maroc spécialisé ISO 27001, ISO 27005, NIS2.
-30 ans d’expérience IT dont 5 ans en cybersécurité.
-</p>
+    <section class="card">
+      <h2>Compétences clés</h2>
+      <div class="badges">
+        <span class="badge">ISO 27001</span>
+        <span class="badge">ISO 27005</span>
+        <span class="badge">NIS2</span>
+        <span class="badge">EBIOS RM</span>
+        <span class="badge">SOC / SIEM</span>
+        <span class="badge">CISSP</span>
+        <span class="badge">Gestion de crise</span>
+        <span class="badge">Gouvernance SSI</span>
+      </div>
+    </section>
 
-<a href="#" class="btn">Télécharger CV PDF</a>
+    <section class="card">
+      <h2>Expérience</h2>
 
-</div>
+      <div class="job">
+        <div class="title">Consultant Freelance — Cybersécurité</div>
+        <div class="date">2025 — Présent</div>
+        <ul>
+          <li>Gouvernance cybersécurité et stratégie sécurité SI.</li>
+          <li>Gestion des risques selon ISO 27005 et EBIOS RM.</li>
+          <li>Accompagnement à la conformité ISO 27001 et NIS2.</li>
+        </ul>
+      </div>
 
-<div class="card">
-<h2>Disponibilité</h2>
-<p>Disponible immédiatement pour missions RSSI, audit ISO 27001, NIS2, gestion des risques et gouvernance cybersécurité.</p>
-</div>
+      <div class="job">
+        <div class="title">Directeur Général & RSSI — AZunix</div>
+        <div class="date">2004 — 2025</div>
+        <ul>
+          <li>Pilotage stratégique et développement d’une entreprise IT.</li>
+          <li>Mise en place de services SOC, SIEM et MSSP.</li>
+          <li>Gouvernance sécurité, conformité et sécurisation des SI clients.</li>
+        </ul>
+      </div>
 
-<div class="card">
-<h2>Compétences clés</h2>
-<span class="badge">ISO 27001</span>
-<span class="badge">ISO 27005</span>
-<span class="badge">NIS2</span>
-<span class="badge">EBIOS RM</span>
-<span class="badge">SOC / SIEM</span>
-<span class="badge">CISSP</span>
-<span class="badge">Gestion de crise</span>
-</div>
+      <div class="job">
+        <div class="title">Directeur Commercial — IB Maroc</div>
+        <div class="date">1998 — 2004</div>
+        <ul>
+          <li>Développement commercial et accompagnement clients sur des projets IT.</li>
+          <li>Interface avec partenaires, éditeurs et constructeurs.</li>
+        </ul>
+      </div>
+    </section>
 
-<div class="card">
-<h2>Expérience</h2>
+    <section class="card">
+      <h2>Formation</h2>
 
-<div class="job">
-<div class="title">Consultant Freelance — Cybersécurité</div>
-<div class="date">2025 — Présent</div>
-<ul>
-<li>Gouvernance cybersécurité & stratégie sécurité SI</li>
-<li>Gestion des risques ISO 27005 / EBIOS RM</li>
-<li>Mise en conformité ISO 27001 & NIS2</li>
-</ul>
-</div>
+      <div class="job">
+        <div class="title">MBA Exécutif — Management de la Cybersécurité & Gouvernance des SI</div>
+        <div class="date">EGE Paris — 2022 à 2023</div>
+      </div>
 
-<div class="job">
-<div class="title">Directeur Général & RSSI — AZunix</div>
-<div class="date">2004 — 2025</div>
-<ul>
-<li>Pilotage stratégique & développement entreprise IT</li>
-<li>Déploiement SOC, SIEM, MSSP</li>
-<li>Mise en conformité ISO & gouvernance sécurité</li>
-</ul>
-</div>
+      <div class="job">
+        <div class="title">Licence Informatique</div>
+        <div class="date">Université Marne-la-Vallée</div>
+      </div>
 
-</div>
-
-<div class="card">
-<h2>Formation</h2>
-
-<div class="job">
-<div class="title">MBA Cybersécurité — EGE Paris</div>
-</div>
-
-<div class="job">
-<div class="title">Licence Informatique</div>
-</div>
-
-</div>
-
-</div>
+      <div class="job">
+        <div class="title">DUT Informatique de Gestion</div>
+        <div class="date">IUT Léonard de Vinci</div>
+      </div>
+    </section>
+  </div>
 
 </body>
 </html>
