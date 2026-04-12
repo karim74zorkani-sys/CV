@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karim Zorkani — RSSI & Expert Cybersécurité</title>
+  <meta name="description" content="RSSI & Expert Cybersécurité CISSP | ISO 27001, ISO 27005, NIS2 | 30 ans d'expérience IT">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#070b12;--surf:#0f1621;--surf2:#161e2e;
+      --accent:#00c8a0;--accent2:#3b82f6;
+      --text:#e2e8f0;--muted:#7c8fa8;--border:rgba(255,255,255,0.07);
+      --fh:'Syne',sans-serif;--fb:'DM Sans',sans-serif;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:var(--fb);font-size:15px;line-height:1.75;overflow-x:hidden}
+    ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px}
+
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:.9rem 3rem;background:rgba(7,11,18,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+    .nav-logo{font-family:var(--fh);font-weight:800;font-size:1rem;letter-spacing:.12em;color:var(--accent)}
+    .nav-links{display:flex;gap:2rem;list-style:none}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:.78rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover{color:var(--accent)}
+    @media(max-width:768px){.nav-links{display:none}nav{padding:.9rem 1.5rem}}
+
+    #hero{min-height:100vh;display:flex;align-items:center;padding:7rem 3rem 4rem;position:relative;overflow:hidden}
+    .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 55% 55% at 75% 40%,rgba(0,200,160,.08) 0%,transparent 70%),radial-gradient(ellipse 40% 40% at 20% 70%,rgba(59,130,246,.06) 0%,transparent 70%)}
+    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black 20%,transparent 100%)}
+    .hero-inner{position:relative;max-width:780px}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,200,160,.08);border:1px solid rgba(0,200,160,.25);border-radius:100px;padding:5px 14px;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:1.75rem}
+    .hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);animation:blink 2s ease-in-out infinite}
+    @keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.5)}}
+    .hero-name{font-family:var(--fh);font-size:clamp(3.2rem,8vw,6rem);font-weight:800;line-height:1.0;letter-spacing:-.03em;margin-bottom:.6rem}
+    .hero-name em{font-style:normal;color:var(--accent)}
+    .hero-role{font-family:var(--fh);font-size:clamp(.95rem,2vw,1.15rem);font-weight:400;color:var(--muted);margin-bottom:1.5rem;letter-spacing:.02em}
+    .hero-summary{font-size:.95rem;color:var(--muted);max-width:600px;line-height:1.85;margin-bottom:2.5rem;border-left:2px solid var(--accent);padding-left:1.2rem}
+    .hero-stats{display:flex;gap:2.5rem;flex-wrap:wrap;margin-bottom:2.5rem}
+    .stat-n{font-family:var(--fh);font-size:2rem;font-weight:800;color:var(--accent);line-height:1}
+    .stat-l{font-size:.75rem;color:var(--muted);margin-top:3px;letter-spacing:.04em}
+    .hero-cta{display:flex;gap:.75rem;flex-wrap:wrap}
+    .btn-p{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#070b12;padding:.7rem 1.6rem;border-radius:6px;font-weight:700;font-size:.85rem;letter-spacing:.03em;text-decoration:none;border:none;cursor:pointer;transition:all .2s}
+    .btn-p:hover{background:#00dfb2;transform:translateY(-1px)}
+    .btn-s{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--border);color:var(--text);padding:.7rem 1.6rem;border-radius:6px;font-size:.85rem;text-decoration:none;transition:all .2s}
+    .btn-s:hover{border-color:var(--accent);color:var(--accent)}
+
+    .section{padding:5rem 3rem}
+    @media(max-width:768px){.section{padding:3.5rem 1.5rem}}
+    .wrap{max-width:980px;margin:0 auto}
+    .s-label{font-family:var(--fh);font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:.4rem}
+    .s-title{font-family:var(--fh);font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800;margin-bottom:2.5rem;line-height:1.1}
+    .alt-bg{background:var(--surf)}
+
+    .about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:3.5rem}
+    @media(max-width:700px){.about-grid{grid-template-columns:1fr;gap:2rem}}
+    .about-text{font-size:.95rem;color:var(--muted);line-height:1.9}
+    .about-text strong{color:var(--text);font-weight:600}
+    .info-table{width:100%;border-collapse:collapse}
+    .info-table tr{border-bottom:1px solid var(--border)}
+    .info-table tr:last-child{border-bottom:none}
+    .info-table td{padding:.65rem 0;font-size:.88rem;vertical-align:top}
+    .info-table td:first-child{color:var(--muted);font-weight:500;width:110px}
+    .info-table td:last-child{color:var(--text)}
+    .tag-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:1.5rem}
+    .tag{background:rgba(0,200,160,.08);border:1px solid rgba(0,200,160,.2);color:var(--accent);border-radius:4px;padding:3px 10px;font-size:.75rem;font-weight:500}
+
+    .skills-cols{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+    @media(max-width:700px){.skills-cols{grid-template-columns:1fr;gap:2rem}}
+    .sg-title{font-family:var(--fh);font-size:.8rem;font-weight:700;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:1.2rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+    .skill-row{margin-bottom:1.1rem}
+    .skill-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px}
+    .skill-name{font-size:.88rem;font-weight:500}
+    .skill-pct{font-family:var(--fh);font-size:.8rem;color:var(--accent);font-weight:700}
+    .skill-bar{height:3px;background:var(--surf2);border-radius:2px;overflow:hidden}
+    .skill-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:2px;width:0;transition:width 1.3s cubic-bezier(.4,0,.2,1)}
+    .soft-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:.85rem;font-size:.88rem;color:var(--muted)}
+    .soft-item::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--accent);margin-top:8px;flex-shrink:0}
+    .lang-grid{display:flex;gap:2.5rem;flex-wrap:wrap}
+    .lang-name{font-weight:600;font-size:.9rem;margin-bottom:6px}
+    .lang-dots{display:flex;gap:4px}
+    .dot{width:10px;height:10px;border-radius:50%}
+    .dot-on{background:var(--accent)}
+    .dot-off{background:var(--surf2);border:1px solid var(--border)}
+
+    .cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem}
+    .cert-card{background:var(--surf2);border:1px solid var(--border);border-radius:12px;padding:1.5rem 1.25rem;text-align:center;transition:border-color .2s,transform .2s;position:relative;overflow:hidden}
+    .cert-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));opacity:0;transition:opacity .2s}
+    .cert-card:hover{border-color:rgba(0,200,160,.35);transform:translateY(-3px)}
+    .cert-card:hover::before{opacity:1}
+    .cert-ico{font-size:2rem;margin-bottom:.75rem;display:block}
+    .cert-n{font-family:var(--fh);font-size:.9rem;font-weight:700;margin-bottom:.3rem;line-height:1.3}
+    .cert-b{font-size:.75rem;color:var(--muted);line-height:1.4}
+    .cert-org{display:inline-block;margin-top:8px;font-size:.7rem;font-weight:600;letter-spacing:.06em;color:var(--accent);background:rgba(0,200,160,.1);padding:2px 8px;border-radius:3px}
+
+    .tl{position:relative;padding-left:1.75rem}
+    .tl::before{content:'';position:absolute;left:0;top:10px;bottom:0;width:1px;background:linear-gradient(to bottom,var(--accent) 0%,rgba(0,200,160,.1) 100%)}
+    .tl-item{position:relative;margin-bottom:2.5rem}
+    .tl-item::before{content:'';position:absolute;left:-1.75rem;top:9px;width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px rgba(0,200,160,.15)}
+    .tl-date{font-size:.73rem;font-weight:700;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;margin-bottom:.25rem}
+    .tl-org{font-family:var(--fh);font-size:1.05rem;font-weight:700;margin-bottom:.2rem}
+    .tl-role{font-size:.88rem;color:var(--accent);font-weight:500;margin-bottom:.35rem}
+    .tl-loc{font-size:.78rem;color:var(--muted);margin-bottom:.6rem}
+    .tl-list{list-style:none;padding:0}
+    .tl-list li{position:relative;padding-left:1rem;font-size:.87rem;color:var(--muted);margin-bottom:.3rem}
+    .tl-list li::before{content:'–';position:absolute;left:0;color:var(--accent)}
+    .badge{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:.06em;padding:2px 9px;border-radius:4px;background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.25);color:#93c5fd}
+
+    .contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:3rem}
+    @media(max-width:700px){.contact-grid{grid-template-columns:1fr}}
+    .c-item{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.5rem}
+    .c-ico{width:38px;height:38px;flex-shrink:0;background:rgba(0,200,160,.08);border:1px solid rgba(0,200,160,.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.95rem}
+    .c-label{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+    .c-val{font-size:.92rem;color:var(--text)}
+    .c-val a{color:var(--accent);text-decoration:none}
+    .form{display:flex;flex-direction:column;gap:.85rem}
+    .form-row2{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}
+    @media(max-width:500px){.form-row2{grid-template-columns:1fr}}
+    input,textarea{background:var(--surf);border:1px solid var(--border);border-radius:6px;padding:.7rem 1rem;color:var(--text);font-family:var(--fb);font-size:.88rem;width:100%;outline:none;transition:border-color .2s}
+    input:focus,textarea:focus{border-color:var(--accent)}
+    input::placeholder,textarea::placeholder{color:var(--muted)}
+    textarea{resize:vertical;min-height:110px}
+
+    footer{text-align:center;padding:2rem;border-top:1px solid var(--border);color:var(--muted);font-size:.82rem}
+    footer a{color:var(--accent);text-decoration:none}
+    #topBtn{display:none;position:fixed;bottom:1.75rem;right:1.75rem;background:var(--accent);color:#070b12;border:none;cursor:pointer;width:40px;height:40px;border-radius:8px;font-size:1rem;font-weight:800;z-index:99;align-items:center;justify-content:center;transition:all .2s}
+    #topBtn:hover{background:#00dfb2;transform:translateY(-2px)}
+    .fi{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}
+    .fi.on{opacity:1;transform:translateY(0)}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">KZ</div>
+  <ul class="nav-links">
+    <li><a href="#about">Profil</a></li>
+    <li><a href="#skills">Compétences</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#experience">Expérience</a></li>
+    <li><a href="#education">Formation</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">Disponible — Consultant Freelance</div>
+    <h1 class="hero-name">Karim<br><em>Zorkani</em></h1>
+    <p class="hero-role">RSSI · Expert Cybersécurité · CISSP</p>
+    <p class="hero-summary">
+      Expert en cybersécurité et gouvernance des SI, certifié <strong style="color:var(--text)">CISSP</strong>,
+      avec <strong style="color:var(--text)">30 ans d'expérience IT</strong> dont 5 ans en cybersécurité.
+      Spécialiste en gouvernance, gestion des risques et conformité (ISO 27001, ISO 27005, NIS2),
+      j'accompagne les organisations dans l'alignement stratégique sécurité–métier et le renforcement de leur résilience.
+    </p>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-n">30+</div><div class="stat-l">Années d'expérience</div></div>
+      <div class="stat"><div class="stat-n">5</div><div class="stat-l">Certifications</div></div>
+      <div class="stat"><div class="stat-n">2004</div><div class="stat-l">Fondateur AZunix</div></div>
+    </div>
+    <div class="hero-cta">
+      <a href="https://www.linkedin.com/in/karim-zorkani-05b2ba1/" target="_blank" class="btn-p">↗ LinkedIn</a>
+      <a href="#contact" class="btn-s">Me contacter</a>
+      <a href="#experience" class="btn-s">Voir le parcours</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section alt-bg">
+  <div class="wrap fi">
+    <div class="s-label">Profil</div>
+    <h2 class="s-title">À propos</h2>
+    <div class="about-grid">
+      <div>
+        <p class="about-text">
+          Directeur Général &amp; RSSI chez <strong>AZunix</strong> de 2004 à 2025, je pilote aujourd'hui des
+          missions de conseil en cybersécurité en tant que <strong>consultant freelance</strong> basé entre Lille et Rabat.<br><br>
+          Mon expertise couvre la <strong>gouvernance des SI</strong>, la <strong>gestion des risques</strong> (ISO 27005 / EBIOS RM),
+          l'accompagnement à la certification <strong>ISO 27001</strong>, la conformité <strong>NIS2</strong> et <strong>RGPD</strong>,
+          ainsi que la mise en place de dispositifs SOC / SIEM / MSSP.<br><br>
+          Auteur du mémoire <em>« Infrastructures et souveraineté des données : Quel modèle pour le Royaume du Maroc ? »</em> — EGE Paris, 2023.
+        </p>
+        <div class="tag-list">
+          <span class="tag">ISO 27001</span><span class="tag">ISO 27005</span><span class="tag">NIS2</span>
+          <span class="tag">RGPD</span><span class="tag">EBIOS RM</span><span class="tag">SOC / SIEM</span>
+          <span class="tag">OSINT</span><span class="tag">PCA / PRA</span><span class="tag">CTI</span>
+          <span class="tag">CISSP</span><span class="tag">Threat Hunting</span>
+        </div>
+      </div>
+      <div>
+        <table class="info-table">
+          <tr><td>Statut</td><td>Consultant Freelance</td></tr>
+          <tr><td>Localisation</td><td>Lille &amp; Rabat, Maroc</td></tr>
+          <tr><td>Téléphone</td><td>0661-241301</td></tr>
+          <tr><td>Email</td><td>karim74zorkani@gmail.com</td></tr>
+          <tr><td>LinkedIn</td><td><a href="https://www.linkedin.com/in/karim-zorkani-05b2ba1/" style="color:var(--accent);text-decoration:none" target="_blank">karim-zorkani</a></td></tr>
+          <tr><td>Langues</td><td>Français · Anglais</td></tr>
+          <tr><td>Intérêts</td><td>Jardinage · Sport d'équipe</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <div class="wrap fi">
+    <div class="s-label">Expertise</div>
+    <h2 class="s-title">Compétences</h2>
+    <div class="skills-cols">
+      <div>
+        <div class="sg-title">Cybersécurité</div>
+        <div class="skill-row"><div class="skill-top"><span class="skill-name">Accompagnement SMSI ISO 27001</span><span class="skill-pct">90%</span></div><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div></div>
+        <div class="skill-row"><div class="skill-top"><span class="skill-name">Gestion des risques ISO 27005 / EBIOS RM</span><span class="skill-pct">85%</span></div><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
+        <div class="skill-row"><div class="skill-top"><span class="skill-name">Mise en conformité NIS2</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" data-w="80"></div></div></div>
+        <div class="skill-row"><div class="skill-top"><span class="skill-name">Gestion de crise &amp; Réponse aux incidents</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" data-w="80"></div></div></div>
+        <div class="skill-row"><div class="skill-top"><span class="skill-name">RGPD &amp; Sécurité des données</span><span class="skill-pct">75%</span></div><div class="skill-bar"><div class="skill-fill" data-w="75"></div></div></div>
+        <div class="skill-row"><div class="skill-top"><span class="skill-name">Continuité d'activité PCA/PRA — ISO 22301</span><span class="skill-pct">75%</span></div><div class="skill-bar"><div class="skill-fill" data-w="75"></div></div></div>
+        <div class="skill-row"><div class="skill-top"><span class="skill-name">SOC · SIEM · EDR · XDR · SOAR</span><span class="skill-pct">70%</span></div><div class="skill-bar"><div class="skill-fill" data-w="70"></div></div></div>
+        <div class="skill-row"><div class="skill-top"><span class="skill-name">OSINT &amp; Intelligence économique</span><span class="skill-pct">70%</span></div><div class="skill-bar"><div class="skill-fill" data-w="70"></div></div></div>
+      </div>
+      <div>
+        <div class="sg-title">Informatique</div>
+        <div class="skill-row"><div class="skill-top"><span class="skill-name">Architectures TIC &amp; Technologies SI</span><span class="skill-pct">85%</span></div><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
+        <div class="skill-row"><div class="skill-top"><span class="skill-name">Bases de données — Oracle, Sybase, SQL Server</span><span class="skill-pct">70%</span></div><div class="skill-bar"><div class="skill-fill" data-w="70"></div></div></div>
+        <br>
+        <div class="sg-title">Soft Skills</div>
+        <div class="soft-item">Leadership &amp; communication COMEX / Directions générales</div>
+        <div class="soft-item">Gestion de crise et prise de décision</div>
+        <div class="soft-item">Capacité d'analyse et de synthèse</div>
+        <div class="soft-item">Pilotage transverse et coordination multi-acteurs</div>
+        <div class="soft-item">Sens de la confidentialité et de l'éthique</div>
+        <br>
+        <div class="sg-title">Langues</div>
+        <div class="lang-grid">
+          <div><div class="lang-name">Français</div><div class="lang-dots"><div class="dot dot-on"></div><div class="dot dot-on"></div><div class="dot dot-on"></div><div class="dot dot-on"></div><div class="dot dot-on"></div><div class="dot dot-on"></div><div class="dot dot-on"></div><div class="dot dot-off"></div></div></div>
+          <div><div class="lang-name">Anglais</div><div class="lang-dots"><div class="dot dot-on"></div><div class="dot dot-on"></div><div class="dot dot-on"></div><div class="dot dot-off"></div><div class="dot dot-off"></div><div class="dot dot-off"></div><div class="dot dot-off"></div><div class="dot dot-off"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="section alt-bg">
+  <div class="wrap fi">
+    <div class="s-label">Accréditations</div>
+    <h2 class="s-title">Certifications</h2>
+    <div class="cert-grid">
+      <div class="cert-card"><span class="cert-ico">🏆</span><div class="cert-n">CISSP</div><div class="cert-b">Certified Information Systems Security Professional</div><span class="cert-org">(ISC)²</span></div>
+      <div class="cert-card"><span class="cert-ico">🛡️</span><div class="cert-n">CC</div><div class="cert-b">Certified in Cybersecurity</div><span class="cert-org">(ISC)²</span></div>
+      <div class="cert-card"><span class="cert-ico">📋</span><div class="cert-n">ISO/IEC 27001</div><div class="cert-b">Senior Lead Implementer</div><span class="cert-org">PECB</span></div>
+      <div class="cert-card"><span class="cert-ico">🔒</span><div class="cert-n">NIS 2 Directive</div><div class="cert-b">Senior Lead Implementer</div><span class="cert-org">PECB</span></div>
+      <div class="cert-card"><span class="cert-ico">⚠️</span><div class="cert-n">ISO 27005</div><div class="cert-b">Risk Manager</div><span class="cert-org">PECB</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <div class="wrap fi">
+    <div class="s-label">Parcours professionnel</div>
+    <h2 class="s-title">Expérience</h2>
+    <div class="tl">
+      <div class="tl-item">
+        <div class="tl-date">Mars 2025 — Présent</div>
+        <div class="tl-org">Consultant Freelance</div>
+        <div class="tl-role">Expert Cybersécurité</div>
+        <div class="tl-loc">📍 Rabat, Maroc &nbsp;<span class="badge">Freelance</span></div>
+        <ul class="tl-list">
+          <li>Pilotage et conduite de projets de cybersécurité : gouvernance, gestion des risques, déploiement des dispositifs de protection</li>
+          <li>Élaboration de la cartographie des SI conformément au référentiel méthodologique de l'ANSSI</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Janvier 2004 — Février 2025</div>
+        <div class="tl-org">AZunix <span style="font-weight:400;font-size:.85rem;color:var(--muted)">— www.azunix.ma</span></div>
+        <div class="tl-role">Directeur Général &amp; RSSI</div>
+        <div class="tl-loc">📍 Rabat, Maroc &nbsp;<span class="badge">Temps plein</span></div>
+        <ul class="tl-list">
+          <li>Pilotage d'une croissance durable dans un environnement IT concurrentiel avec renforcement du positionnement marché</li>
+          <li>Développement de partenariats stratégiques et pilotage d'un axe cybersécurité (SOC, SIEM, MSSP) aligné avec les enjeux business</li>
+          <li>Mise en œuvre de la gouvernance et de la conformité (ISO 45001, ISO 27001/27005)</li>
+          <li>Réalisation de projets de sécurisation des SI pour des clients variés</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Janvier 1998 — Décembre 2004</div>
+        <div class="tl-org">IB Maroc</div>
+        <div class="tl-role">Directeur Commercial</div>
+        <div class="tl-loc">📍 Rabat, Maroc &nbsp;<span class="badge">Temps plein</span></div>
+        <ul class="tl-list">
+          <li>Élaboration et mise en œuvre de stratégie commerciale</li>
+          <li>Accompagnement des prospects dans la définition de leurs besoins</li>
+          <li>Fidélisation des clients et veille de marché &amp; concurrentielle</li>
+          <li>Interface avec les partenaires constructeurs et éditeurs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="section alt-bg">
+  <div class="wrap fi">
+    <div class="s-label">Académique</div>
+    <h2 class="s-title">Formation</h2>
+    <div class="tl">
+      <div class="tl-item">
+        <div class="tl-date">Septembre 2022 — Juin 2023</div>
+        <div class="tl-org">École de Guerre Économique (EGE)</div>
+        <div class="tl-role">MBA Exécutif — Management de la Cybersécurité &amp; Gouvernance des SI</div>
+        <div class="tl-loc">📍 Paris, France</div>
+        <ul class="tl-list">
+          <li>Mémoire : <em>« Infrastructures et souveraineté des données : Quel modèle pour le Royaume du Maroc ? »</em></li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Octobre 1993 — Juillet 1994</div>
+        <div class="tl-org">Université Marne-la-Vallée</div>
+        <div class="tl-role">Licence Informatique</div>
+        <div class="tl-loc">📍 Paris, France</div>
+        <ul class="tl-list">
+          <li>Algorithmique &amp; structures de données · Compilation · Intelligence Artificielle</li>
+          <li>Programmation C, Lisp et SQL</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Septembre 1991 — Juillet 1992</div>
+        <div class="tl-org">IUT Léonard de Vinci</div>
+        <div class="tl-role">DUT Informatique de Gestion</div>
+        <div class="tl-loc">📍 Reims, France</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="wrap fi">
+    <div class="s-label">Restons en contact</div>
+    <h2 class="s-title">Me contacter</h2>
+    <div class="contact-grid">
+      <div>
+        <div class="c-item"><div class="c-ico">✉️</div><div><div class="c-label">Email</div><div class="c-val">karim74zorkani@gmail.com</div></div></div>
+        <div class="c-item"><div class="c-ico">📞</div><div><div class="c-label">Téléphone</div><div class="c-val">0661-241301</div></div></div>
+        <div class="c-item"><div class="c-ico">📍</div><div><div class="c-label">Localisation</div><div class="c-val">Lille &amp; Rabat, Maroc</div></div></div>
+        <div class="c-item"><div class="c-ico">💼</div><div><div class="c-label">LinkedIn</div><div class="c-val"><a href="https://www.linkedin.com/in/karim-zorkani-05b2ba1/" target="_blank">karim-zorkani-05b2ba1</a></div></div></div>
+      </div>
+      <form class="form" action="https://formspree.io/f/karim74zorkani@gmail.com" method="POST">
+        <div class="form-row2">
+          <input type="text" name="name" placeholder="Votre nom" required>
+          <input type="email" name="email" placeholder="Votre email" required>
+        </div>
+        <input type="text" name="subject" placeholder="Sujet" required>
+        <textarea name="message" placeholder="Votre message…" required></textarea>
+        <button type="submit" class="btn-p" style="border:none;cursor:pointer;align-self:flex-start;">Envoyer →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Karim Zorkani · RSSI &amp; Expert Cybersécurité · <a href="https://www.azunix.ma" target="_blank">AZunix</a></p>
+</footer>
+
+<button id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const b = document.getElementById('topBtn');
+    b.style.display = window.scrollY > 300 ? 'flex' : 'none';
+  });
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fi').forEach(el => obs.observe(el));
+  const skillObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.skill-fill').forEach(b => { b.style.width = b.dataset.w + '%'; });
+        skillObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  document.querySelectorAll('#skills .wrap').forEach(el => skillObs.observe(el));
+</script>
+</body>
+</html>
